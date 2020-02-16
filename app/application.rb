@@ -12,7 +12,6 @@ class Application
       resp.write item.price
     else
         resp.write("Item not found")
-    end
 
     elsif req.path.match(/testing/)
       resp.write("Route not found")
