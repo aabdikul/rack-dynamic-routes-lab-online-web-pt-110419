@@ -16,7 +16,7 @@ class Application
       item = @@items.each do {|item| item.name == item_name}
       @@items.include?(item) == true
         resp.write item.price
-      else
+      elsif
         resp.write("Item not found")
         resp.status = 400
         binding.pry
