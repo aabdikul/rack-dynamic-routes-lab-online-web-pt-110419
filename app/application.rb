@@ -13,10 +13,9 @@ class Application
 
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      @@items.each do |item|
-        item.include?(item_name)
+      items = @@items.each do {|item| item.name == item_name}
+      if @@items.include?(item)
         resp.write item.price
-      end
       else
         resp.write("Item not found")
         resp.status = 400
