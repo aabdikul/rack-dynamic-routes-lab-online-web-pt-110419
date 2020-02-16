@@ -15,6 +15,7 @@ class Application
         item_name = req.path.split("/items/").last
         if @@items.exclude?(item_name)
         resp.write("Item not found")
+      end
 
     elsif req.path.match(/testing/)
       resp.write("Route not found")
