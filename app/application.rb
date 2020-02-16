@@ -18,7 +18,7 @@ class Application
     else
         resp.write("Item not found")
         resp.status = 400
-        binding.pry
+        
     end
 
     resp.finish
