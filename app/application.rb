@@ -17,9 +17,8 @@ class Application
     else
         resp.write("Item not found")
     end
-    end
+    
     resp.finish
-
   end
 
 end
