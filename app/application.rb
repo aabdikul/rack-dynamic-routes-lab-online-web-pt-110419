@@ -17,6 +17,7 @@ class Application
         if item.include?(item_name)
         resp.write item.price
       end
+    end
       else
         resp.write("Item not found")
         resp.status = 400
