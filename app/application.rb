@@ -13,7 +13,7 @@ class Application
 
     elsif req.path.match(/items/)
         item_name = req.path.split("/items/").last
-        if @@items.exclude?(item_name)
+        if @@items.exclude?(item_name) == true
         resp.write("Item not found")
       end
 
