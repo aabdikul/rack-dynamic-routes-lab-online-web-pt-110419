@@ -15,13 +15,12 @@ class Application
       item_name = req.path.split("/items/").last
       item = @@items.each do {|item| item.name == item_name}
       resp.write item.price
-      else
+    else
         resp.write("Item not found")
         resp.status = 400
         binding.pry
-      end
+    end
 
     resp.finish
   end
-
 end
