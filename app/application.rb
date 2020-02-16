@@ -1,3 +1,4 @@
+require 'pry'
 class Application
 
 @@items = []
@@ -16,7 +17,7 @@ class Application
       resp.write item.price
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      
+
       if @@items.include?(item_name) == false
         resp.write("Item not found")
         resp.status = 400
