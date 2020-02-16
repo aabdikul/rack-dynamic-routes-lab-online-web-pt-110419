@@ -16,8 +16,9 @@ class Application
         if @@items.include?(item_name) == true
           resp.write item_name.price
 
-      item = @@items.find{|item| item.name == item_name}
-      resp.write item.price
+      #item = @@items.find{|item| item.name == item_name}
+      #resp.write item.price
+      end
 
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
