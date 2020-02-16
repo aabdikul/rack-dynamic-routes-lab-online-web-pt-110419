@@ -12,9 +12,11 @@ class Application
 
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      resp.write item_name.price
+      item = @@items.find{|item| item.name}
+      resp.write item.price
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
+      
       if @@items.include?(item_name) == false
         resp.write("Item not found")
         resp.status = 400
