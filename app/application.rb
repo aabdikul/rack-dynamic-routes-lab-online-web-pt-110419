@@ -20,7 +20,6 @@ class Application
         resp.status = 400
         binding.pry
       end
-    end
 
     resp.finish
   end
