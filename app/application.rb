@@ -14,8 +14,7 @@ class Application
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
       if @@items.include?(item_name) == true
-        resp.write item.price
-        binding.pry
+        resp.write item_name.price
       else
         resp.write("Item not found")
         resp.status = 400
