@@ -17,7 +17,7 @@ class Application
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
       item = @@items.find{|item| item.name}
-      @@items.include?(item) == true
+      @@items.include?(item) == false
         resp.write("Item not found")
         resp.status = 400
     end
