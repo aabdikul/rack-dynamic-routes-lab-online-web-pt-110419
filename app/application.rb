@@ -14,7 +14,7 @@ class Application
     elsif req.path.match(/items/)
       item_name = req.path.split("/items/").last
       item = item_name.to_s
-      if @@items.include?(item_name)
+      if @@items.include?(item)
         resp.write item_name.price
       else
         resp.write("Item not found")
