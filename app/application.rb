@@ -20,6 +20,7 @@ class Application
       else
         resp.write item.price
     end
+    end
 
     resp.finish
   end
